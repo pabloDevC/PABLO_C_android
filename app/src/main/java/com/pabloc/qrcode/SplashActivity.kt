@@ -1,9 +1,9 @@
-package com.iamageo.qrcode
+package com.pabloc.qrcode
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import com.iamageo.qrcode.base.BaseActivity
+import com.pabloc.qrcode.base.BaseActivity
 
 class SplashActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

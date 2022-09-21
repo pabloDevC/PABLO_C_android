@@ -1,4 +1,4 @@
-package com.iamageo.qrcode.base
+package com.pabloc.qrcode.base
 
 import android.os.Bundle
 import android.view.WindowManager

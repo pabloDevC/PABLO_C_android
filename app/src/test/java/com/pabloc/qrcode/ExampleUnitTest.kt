@@ -1,4 +1,4 @@
-package com.iamageo.qrcode
+package com.pabloc.qrcode
 
 import org.junit.Test
 

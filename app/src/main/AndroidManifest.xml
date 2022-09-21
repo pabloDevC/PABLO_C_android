@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.iamageo.qrcode">
+    package="com.pabloc.qrcode">
 
     <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
 
@@ -15,14 +15,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Qrcode">
-        <activity android:name=".SplashActivity">
+        <activity
+            android:name="com.pabloc.qrcode.ScannerActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.pabloc.qrcode.OrderlistActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.pabloc.qrcode.PasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.pabloc.qrcode.MenuActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.pabloc.qrcode.SplashActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
+        <activity android:name="com.pabloc.qrcode.MainActivity" />
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="portrait"
