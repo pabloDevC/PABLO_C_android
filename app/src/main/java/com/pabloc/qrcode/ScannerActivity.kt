@@ -18,7 +18,7 @@ class ScannerActivity : BaseActivity() {
 
         binding.btnScanner.setOnClickListener { initScanner() }
         binding.btnOrder.setOnClickListener {
-            val intent = Intent(this, MenuActivity::class.java)
+            val intent = Intent(this, PasswordActivity::class.java)
             startActivity(intent)
         }
     }

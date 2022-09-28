@@ -17,6 +17,8 @@ public class BlunoActivity extends BlunoLibrary {
 
 private Button buttonScan;
     private Button buttonSerialSend;
+    private Button buttonOpen;
+    private Button buttonClose;
     private EditText serialSendText;
     private TextView serialReceivedText;
 
@@ -53,6 +55,28 @@ private Button buttonScan;
                 // TODO Auto-generated method stub
 
                 serialSend(serialSendText.getText().toString());				//send the data to the BLUNO
+            }
+        });
+
+        buttonOpen = (Button) findViewById(R.id.buttonOpen);		//initial the button for sending the data
+        buttonOpen.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+
+                serialSend("0");				//send the data to the BLUNO
+            }
+        });
+
+        buttonClose = (Button) findViewById(R.id.buttonClose);		//initial the button for sending the data
+        buttonClose.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+
+                serialSend("1");				//send the data to the BLUNO
             }
         });
 
