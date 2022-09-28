@@ -11,11 +11,13 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.pabloc.qrcode.base.BaseActivity;
+
 import java.util.List;
 
 public class BlunoActivity extends BlunoLibrary {
 
-private Button buttonScan;
+    private Button buttonScan;
     private Button buttonSerialSend;
     private Button buttonOpen;
     private Button buttonClose;

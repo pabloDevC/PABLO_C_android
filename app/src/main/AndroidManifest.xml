@@ -4,7 +4,10 @@
     package="com.pabloc.qrcode">
 
     <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
-    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
 
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
     <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
@@ -30,8 +33,8 @@
         android:theme="@style/Theme.Qrcode">
         <activity
             android:name=".BlunoActivity"
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".BlutoothActivity"
             android:exported="false" />
@@ -62,12 +65,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
-<!--        <activity-->
-<!--            android:name="com.journeyapps.barcodescanner.CaptureActivity"-->
-<!--            android:screenOrientation="portrait"-->
-<!--            tools:replace="screenOrientation" />-->
-        <service android:name="com.pabloc.qrcode.BluetoothLeService" android:enabled="true"/>
+        <activity android:name=".MainActivity" /> <!-- <activity -->
+        <!-- android:name="com.journeyapps.barcodescanner.CaptureActivity" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- tools:replace="screenOrientation" /> -->
+        <service
+            android:name=".BluetoothLeService"
+            android:enabled="true" />
     </application>
 
 </manifest>
