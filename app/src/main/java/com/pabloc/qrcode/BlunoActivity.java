@@ -30,12 +30,12 @@ private Button buttonScan;
         request(1000, new OnPermissionsResult() {
             @Override
             public void OnSuccess() {
-                Toast.makeText(BlunoActivity.this,"权限请求成功",Toast.LENGTH_SHORT).show();
+                Toast.makeText(BlunoActivity.this,"권한요청성공",Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void OnFail(List<String> noPermissions) {
-                Toast.makeText(BlunoActivity.this,"权限请求失败",Toast.LENGTH_SHORT).show();
+                Toast.makeText(BlunoActivity.this,"권한요청 실패",Toast.LENGTH_SHORT).show();
             }
         });
 
