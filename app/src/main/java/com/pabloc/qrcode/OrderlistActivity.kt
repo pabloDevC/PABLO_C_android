@@ -2,47 +2,59 @@ package com.pabloc.qrcode
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.pabloc.qrcode.databinding.ActivityOrderlistBinding
+import kotlinx.android.synthetic.main.activity_orderlist.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class OrderlistActivity : AppCompatActivity() {
-
-    private lateinit var binding: ActivityOrderlistBinding
-    private lateinit var adapter: RecyclerViewAdapter
-
-    val mDatas=mutableListOf<DogData>()
+    lateinit var binding: ActivityOrderlistBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding=ActivityOrderlistBinding.inflate(layoutInflater)
+//        setContentView(R.layout.activity_orderlist)
+        binding = ActivityOrderlistBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        initializelist()
-        initDogRecyclerView()
+        loadData()
 
     }
-    fun initDogRecyclerView(){
-        val adapter=RecyclerViewAdapter() //어댑터 객체 만듦
-        adapter.datalist = mDatas //데이터 넣어줌
-        binding.recyclerView.adapter = adapter //리사이클러뷰에 어댑터 연결
-        binding.recyclerView.layoutManager= LinearLayoutManager(this) //레이아웃 매니저 연결
+
+    private fun setAdapter(orderList: List<OrderDtoList>){
+        val mAdapter = RecyclerAdapter(orderList,this)
+        recyclerView.adapter = mAdapter
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.setHasFixedSize(false)
+
     }
 
-    fun initializelist(){ //임의로 데이터 넣어서 만들어봄
-        with(mDatas){
-            add(DogData("","dog1",20,"M"))
-            add(DogData("","dog2",20,"M"))
-            add(DogData("","dog3",20,"M"))
-            add(DogData("","dog4",20,"M"))
-            add(DogData("","dog5",20,"M"))
-            add(DogData("","dog2",20,"M"))
-            add(DogData("","dog6",20,"M"))
-            add(DogData("","dog7",20,"M"))
-            add(DogData("","dog8",20,"M"))
-            add(DogData("","dog9",20,"M"))
-            add(DogData("","dog10",20,"M"))
-            add(DogData("","dog11",20,"M"))
-            add(DogData("","dog12",20,"M"))
-        }
+    private fun loadData() {
+        val retrofit = Retrofit.Builder()
+            .baseUrl("http://ec2-43-200-96-34.ap-northeast-2.compute.amazonaws.com:8080/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+        val retrofitService = retrofit.create(RetrofitInterface::class.java)
+        retrofitService.requestAllData().enqueue(object : Callback<OrderData> {
+            override fun onResponse(call: Call<OrderData>, response: Response<OrderData>) {
+                if (response.isSuccessful) {
+                    Log.d("chaehyun","연결완료")
+                    val body = response.body()
+                    body?.let {
+                        setAdapter(it.result)
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<OrderData>, t: Throwable) {
+                t.message?.let { Log.d("this is error", it) }
+            }
+        })
     }
+
 }
+

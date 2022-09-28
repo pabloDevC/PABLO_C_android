@@ -5,13 +5,19 @@
       <map>
         <entry key="app/src/main/res/drawable/bg_white.xml" value="0.196" />
         <entry key="app/src/main/res/drawable/bg_white_round.xml" value="0.196" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3" />
-        <entry key="app/src/main/res/layout/activity_menu.xml" value="0.28958333333333336" />
-        <entry key="app/src/main/res/layout/activity_orderlist.xml" value="0.3333333333333333" />
+        <entry key="app/src/main/res/layout/activity_bluno.xml" value="0.31927083333333334" />
+        <entry key="app/src/main/res/layout/activity_blutooth.xml" value="0.28020833333333334" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_menu.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_open.xml" value="0.3333333333333333" />
+        <entry key="app/src/main/res/layout/activity_orderlist.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_password.xml" value="0.28958333333333336" />
         <entry key="app/src/main/res/layout/activity_scanner.xml" value="0.3333333333333333" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.3333333333333333" />
-        <entry key="app/src/main/res/layout/item_list.xml" value="0.3333333333333333" />
+        <entry key="app/src/main/res/layout/activity_thermometer.xml" value="0.3333333333333333" />
+        <entry key="app/src/main/res/layout/item_list.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/listitem_device.xml" value="0.27760416666666665" />
+        <entry key="app/src/main/res/layout/thermometer.xml" value="0.1" />
       </map>
     </option>
   </component>

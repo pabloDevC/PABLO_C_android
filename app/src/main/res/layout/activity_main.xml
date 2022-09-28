@@ -32,27 +32,59 @@
         android:layout_marginEnd="16dp"
         android:layout_marginTop="200dp"
         android:background="@drawable/bg_white_round"
-        android:text="Open"
+        android:text="device management"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.499" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnClose"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="300dp"
-        android:background="@drawable/bg_white_round"
-        android:text="Close"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+<!--    <com.google.android.material.button.MaterialButton-->
+<!--        android:id="@+id/btnClose"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        android:layout_marginTop="300dp"-->
+<!--        android:background="@drawable/bg_white_round"-->
+<!--        android:text="Close"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.499" />-->
+
+<!--    <ToggleButton-->
+<!--        android:id="@+id/ble_on_off_btn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.573" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/stateBluetooth"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:text="dddddd"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
+<!--        app:layout_constraintBaseline_toBaselineOf="@+id/btnOpen"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/btnOpen"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/listDevice"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/btnScan"-->
+<!--        android:layout_height="0dp" />-->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

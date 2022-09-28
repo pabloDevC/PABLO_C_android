@@ -4,8 +4,21 @@
     package="com.pabloc.qrcode">
 
     <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
 
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -16,19 +29,32 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Qrcode">
         <activity
-            android:name="com.pabloc.qrcode.ScannerActivity"
+            android:name=".BlunoActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name="com.pabloc.qrcode.OrderlistActivity"
+            android:name=".BlutoothActivity"
             android:exported="false" />
         <activity
-            android:name="com.pabloc.qrcode.PasswordActivity"
+            android:name=".Thermometer"
             android:exported="false" />
         <activity
-            android:name="com.pabloc.qrcode.MenuActivity"
+            android:name=".open"
             android:exported="false" />
         <activity
-            android:name="com.pabloc.qrcode.SplashActivity"
+            android:name=".ScannerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrderlistActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,11 +62,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.pabloc.qrcode.MainActivity" />
+        <activity android:name=".MainActivity" />
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="portrait"
             tools:replace="screenOrientation" />
+        <service android:name="com.pabloc.qrcode.BluetoothLeService" android:enabled="true"/>
     </application>
 
 </manifest>
